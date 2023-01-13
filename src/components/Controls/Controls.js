@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import './Controls.css';
 
 export default function Controls({
@@ -11,7 +12,10 @@ export default function Controls({
   setHeadCount,
   setTorsoCount,
   setLegsCount,
+  setCatchphrases,
 }) {
+  const [phraseValue, setPhraseValue] = useState('');
+
   const headHandler = (event) => {
     setHead(event.target.value);
     setHeadCount((currentCount) => currentCount + 1);
@@ -23,6 +27,15 @@ export default function Controls({
   const legsHandler = (event) => {
     setLegs(event.target.value);
     setLegsCount((currentCount) => currentCount + 1);
+  };
+
+  const catchphraseHandler = (event) => {
+    event.preventDefault();
+    console.log('submitted:', phraseValue);
+    if (phraseValue === '') return;
+    // setCatchphrases((currentPhrases) => currentPhrases.push('another catchphrase'));
+    setCatchphrases((currentPhrases) => [...currentPhrases, phraseValue]);
+    setPhraseValue('');
   };
 
   return (
@@ -52,6 +65,15 @@ export default function Controls({
           <option value="yellow">Yellow</option>
         </select>
       </div>
+      <form onSubmit={catchphraseHandler}>
+        <input
+          type="text"
+          placeholder="Add a Catchphrase"
+          value={phraseValue}
+          onChange={(e) => setPhraseValue(e.target.value)}
+        ></input>
+        <button onClick={catchphraseHandler}>+</button>
+      </form>
     </div>
   );
 }

@@ -15,6 +15,7 @@ function App() {
   const [headCount, setHeadCount] = useState(0);
   const [torsoCount, setTorsoCount] = useState(0);
   const [legsCount, setLegsCount] = useState(0);
+  const [catchphrases, setCatchphrases] = useState(['hello', 'its me']);
 
   return (
     <div className="App">
@@ -30,11 +31,13 @@ function App() {
           setHeadCount,
           setTorsoCount,
           setLegsCount,
+          catchphrases,
+          setCatchphrases,
         }}
       />
       <History {...{ headCount, torsoCount, legsCount }} />
       <Character {...{ head, torso, legs }} />
-      <Phrases />
+      <Phrases {...{ catchphrases }} />
     </div>
   );
 }

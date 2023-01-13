@@ -39,7 +39,6 @@ export default function Controls({
 
   return (
     <div className="controls">
-      <p>Controls go here</p>
       <div>
         <label>Head</label>
         <select value={head} onChange={headHandler}>

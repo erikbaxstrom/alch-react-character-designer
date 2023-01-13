@@ -12,13 +12,14 @@ function App() {
   const [head, setHead] = useState('blue');
   const [torso, setTorso] = useState('blue');
   const [legs, setLegs] = useState('black');
+  const [headCount, setHeadCount] = useState(0);
 
   return (
     <div className="App">
       <header className="App-header">Character Designer</header>
-      <Controls {...{ head, setHead, torso, setTorso, legs, setLegs }} />
-      <Histroy />
-      <Character {...{ head, torso, legs }} />
+      <Controls {...{ head, setHead, torso, setTorso, legs, setLegs, headCount, setHeadCount }} />
+      <Histroy {...{ headCount }} />
+      <Character {...{ head, torso, legs, headCount }} />
       <Phrases />
     </div>
   );

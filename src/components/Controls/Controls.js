@@ -1,9 +1,19 @@
 import React from 'react';
 import './Controls.css';
 
-export default function Controls({ head, setHead, torso, setTorso, legs, setLegs }) {
+export default function Controls({
+  head,
+  setHead,
+  torso,
+  setTorso,
+  legs,
+  setLegs,
+  headCount,
+  setHeadCount,
+}) {
   const headHandler = (event) => {
     setHead(event.target.value);
+    setHeadCount((currentCount) => currentCount + 1);
   };
   const torsoHandler = (event) => {
     setTorso(event.target.value);

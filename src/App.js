@@ -14,14 +14,25 @@ function App() {
   const [legs, setLegs] = useState('black');
   const [headCount, setHeadCount] = useState(0);
   const [torsoCount, setTorsoCount] = useState(0);
+  const [legsCount, setLegsCount] = useState(0);
 
   return (
     <div className="App">
       <header className="App-header">Character Designer</header>
       <Controls
-        {...{ head, setHead, torso, setTorso, legs, setLegs, setHeadCount, setTorsoCount }}
+        {...{
+          head,
+          setHead,
+          torso,
+          setTorso,
+          legs,
+          setLegs,
+          setHeadCount,
+          setTorsoCount,
+          setLegsCount,
+        }}
       />
-      <History {...{ headCount, torsoCount }} />
+      <History {...{ headCount, torsoCount, legsCount }} />
       <Character {...{ head, torso, legs }} />
       <Phrases />
     </div>

@@ -10,6 +10,7 @@ export default function Controls({
   setLegs,
   setHeadCount,
   setTorsoCount,
+  setLegsCount,
 }) {
   const headHandler = (event) => {
     setHead(event.target.value);
@@ -21,6 +22,7 @@ export default function Controls({
   };
   const legsHandler = (event) => {
     setLegs(event.target.value);
+    setLegsCount((currentCount) => currentCount + 1);
   };
 
   return (

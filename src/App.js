@@ -15,7 +15,7 @@ function App() {
   const [headCount, setHeadCount] = useState(0);
   const [torsoCount, setTorsoCount] = useState(0);
   const [legsCount, setLegsCount] = useState(0);
-  const [catchphrases, setCatchphrases] = useState(['hello', 'its me']);
+  const [catchphrases, setCatchphrases] = useState([]);
 
   return (
     <div className="App">

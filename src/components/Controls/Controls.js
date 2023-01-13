@@ -31,7 +31,6 @@ export default function Controls({
 
   const catchphraseHandler = (event) => {
     event.preventDefault();
-    console.log('submitted:', phraseValue);
     if (phraseValue === '') return;
     // setCatchphrases((currentPhrases) => currentPhrases.push('another catchphrase'));
     setCatchphrases((currentPhrases) => [...currentPhrases, phraseValue]);

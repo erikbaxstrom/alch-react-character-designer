@@ -1,13 +1,15 @@
 import React from 'react';
 import './Controls.css';
 
-export default function Controls({ head, setHead, torso, setTorso }) {
+export default function Controls({ head, setHead, torso, setTorso, legs, setLegs }) {
   const headHandler = (event) => {
     setHead(event.target.value);
   };
-
   const torsoHandler = (event) => {
     setTorso(event.target.value);
+  };
+  const legsHandler = (event) => {
+    setLegs(event.target.value);
   };
 
   return (
@@ -27,6 +29,14 @@ export default function Controls({ head, setHead, torso, setTorso }) {
           <option value="blue">Blue</option>
           <option value="orange">Orange</option>
           <option value="white">White</option>
+        </select>
+      </div>
+      <div>
+        <label>Legs</label>
+        <select value={legs} onChange={legsHandler}>
+          <option value="black">Black</option>
+          <option value="pink">Pink</option>
+          <option value="yellow">Yellow</option>
         </select>
       </div>
     </div>

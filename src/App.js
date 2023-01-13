@@ -11,13 +11,14 @@ import Phrases from './components/Phrases/Phrases';
 function App() {
   const [head, setHead] = useState('blue');
   const [torso, setTorso] = useState('blue');
+  const [legs, setLegs] = useState('black');
 
   return (
     <div className="App">
       <header className="App-header">Character Designer</header>
-      <Controls {...{ head, setHead, torso, setTorso }} />
+      <Controls {...{ head, setHead, torso, setTorso, legs, setLegs }} />
       <Histroy />
-      <Character {...{ head, torso }} />
+      <Character {...{ head, torso, legs }} />
       <Phrases />
     </div>
   );

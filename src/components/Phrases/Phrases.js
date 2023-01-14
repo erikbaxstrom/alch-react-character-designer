@@ -6,8 +6,8 @@ export default function Phrases({ catchphrases }) {
     <div className="phrases">
       <h2>Catchphrases</h2>
       <ul>
-        {catchphrases.map((phrase) => (
-          <li key={phrase}>{phrase}</li>
+        {catchphrases.map((phrase, index) => (
+          <li key={index}>{phrase}</li>
         ))}
       </ul>
     </div>

@@ -19,7 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">Character Designer</header>
+      <header className="App-header">
+        <h2>Character Designer</h2>
+      </header>
       <Controls
         {...{
           head,

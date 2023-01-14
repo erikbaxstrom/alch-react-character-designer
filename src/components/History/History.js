@@ -8,10 +8,10 @@ export default function History({ headCount, torsoCount, legsCount }) {
         Head has been changed {headCount} time{headCount !== 1 && 's'}.
       </p>
       <p>
-        Torso has been changed {torsoCount} time{headCount !== 1 && 's'}.
+        Torso has been changed {torsoCount} time{torsoCount !== 1 && 's'}.
       </p>
       <p>
-        Legs have been changed {legsCount} time{headCount !== 1 && 's'}.
+        Legs have been changed {legsCount} time{legsCount !== 1 && 's'}.
       </p>
     </div>
   );
